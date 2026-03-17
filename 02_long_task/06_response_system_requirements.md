@@ -409,8 +409,8 @@ SELECT * FROM problem_details WHERE category_id = 40;
 
 ## 8. 今後の検討事項
 
-- [x] 技術スタック選定 → **React（フロント）+ Python（バックエンド）**
-- [ ] Pythonフレームワーク選定（Django / FastAPI）
+- [x] 技術スタック選定 → **React + Vite（フロント）+ FastAPI + SQLAlchemy（バックエンド）+ SQLite**
+- [x] Pythonフレームワーク選定 → **FastAPI**
 - [ ] 出力フォーマットの最終決定（Excel / Word / PDF / HTML）
 - [ ] ユーザー認証・権限管理の要否
 - [ ] 既存マニュアル（Excel）からのデータ移行方法
