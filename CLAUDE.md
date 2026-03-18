@@ -7,9 +7,12 @@
 
 ## 開発コマンド
 
-### バックエンド（`02_long_task/06_response_system/backend/`）
+### バックエンド（`02_long_task/06_response_system/`）
 
 ```bash
+python -m venv .venv
+source .venv/bin/activate   # Windows: .venv\Scripts\activate
+cd backend
 pip install -r requirements.txt
 python seed.py            # DB初期化 + サンプルデータ投入
 uvicorn main:app --port 8000 --reload
