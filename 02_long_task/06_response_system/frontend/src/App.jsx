@@ -27,14 +27,25 @@ export default function App() {
   // ステップ管理
   const [step, setStep] = useState(1);
 
+  // エラー状態
+  const [error, setError] = useState(null);
+
   // --- マスタ取得 ---
   useEffect(() => {
     fetch(`${API}/containers`)
-      .then((r) => r.json())
-      .then(setContainers);
+      .then((r) => {
+        if (!r.ok) throw new Error(`containers: ${r.status}`);
+        return r.json();
+      })
+      .then(setContainers)
+      .catch((e) => setError(`APIエラー: ${e.message}（バックエンドが起動しているか確認してください）`));
     fetch(`${API}/categories`)
-      .then((r) => r.json())
-      .then(setCategories);
+      .then((r) => {
+        if (!r.ok) throw new Error(`categories: ${r.status}`);
+        return r.json();
+      })
+      .then(setCategories)
+      .catch((e) => setError(`APIエラー: ${e.message}（バックエンドが起動しているか確認してください）`));
   }, []);
 
   // 中分類選択時に小分類を取得
@@ -109,6 +120,12 @@ export default function App() {
   return (
     <div style={styles.container}>
       <h1 style={styles.title}>回答文作成システム</h1>
+
+      {error && (
+        <div style={styles.errorBanner}>
+          {error}
+        </div>
+      )}
 
       {/* ── Step 1: 分類選択 ── */}
       {step >= 1 && (
@@ -395,5 +412,14 @@ const styles = {
   muted: {
     fontSize: 13,
     color: "#6b7280",
+  },
+  errorBanner: {
+    padding: "12px 16px",
+    background: "#fef2f2",
+    border: "1px solid #fecaca",
+    borderRadius: 8,
+    color: "#dc2626",
+    fontSize: 14,
+    marginBottom: 16,
   },
 };
