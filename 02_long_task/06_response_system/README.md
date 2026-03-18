@@ -54,6 +54,53 @@ npm run dev               # → http://localhost:5173
 
 Vite のプロキシ設定により `/api/*` は自動的にバックエンド（port 8000）へ転送されます。
 
+## 動作確認
+
+### seed.py の確認
+
+`python seed.py` 実行後、以下のメッセージが表示されれば成功です。
+
+```
+Seed data inserted successfully.
+```
+
+`backend/` ディレクトリに `response.db` が生成されていることも確認してください。
+
+```bash
+ls backend/response.db
+```
+
+### バックエンド API の疎通確認
+
+バックエンド起動後、別ターミナルで以下を実行します。
+
+```bash
+# 容器一覧が JSON で返れば OK
+curl http://localhost:8000/api/containers
+
+# 期待するレスポンス例:
+# [{"id":1,"name":"350ml缶","description":"スチール缶 350ml","sort_order":1}, ...]
+```
+
+Swagger UI（http://localhost:8000/docs）でも各エンドポイントを試せます。
+
+### フロントエンドの確認
+
+http://localhost:5173 にアクセスし、以下が表示されれば正常です。
+
+1. 容器選択のドロップダウンが表示される
+2. 容器を選択すると大分類一覧が表示される
+3. 大分類→中分類→小分類と選択を進めると回答文が生成される
+
+### よくあるエラー
+
+| 症状 | 原因 | 対処 |
+|------|------|------|
+| `ModuleNotFoundError` | 仮想環境未有効化 | `source .venv/bin/activate` を実行 |
+| `sqlite3.OperationalError: table already exists` | seed.py の重複実行 | `response.db` を削除して再実行 |
+| フロントエンドで API エラー | バックエンド未起動 | `uvicorn main:app --port 8000` を先に起動 |
+| `npm run dev` でポート競合 | 5173 ポートが使用中 | 他のプロセスを終了するか `--port` で別ポートを指定 |
+
 ## 使い方
 
 1. **容器を選択**（例: 350ml缶）
