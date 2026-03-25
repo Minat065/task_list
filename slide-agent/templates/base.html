@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ TITLE }}</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.0/reveal.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.0/theme/white.min.css">
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+  <style>
+    :root {
+      --color-primary: #1a2f4e;
+      --color-secondary: #3a6ea5;
+      --color-dark: #404040;
+      --color-light: #f5f5f5;
+    }
+    .reveal .slides section {
+      height: 100%;
+      box-sizing: border-box;
+      padding: 2%;
+    }
+    .reveal h2 {
+      color: var(--color-primary);
+      font-size: 1.4em;
+      margin-bottom: 0.5em;
+    }
+    .reveal h4 {
+      color: var(--color-secondary);
+      margin: 0 0 0.3em 0;
+    }
+    .block {
+      background: var(--color-light);
+      border-radius: 8px;
+      padding: 0.8em;
+      border-left: 4px solid var(--color-secondary);
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      {{ SLIDES }}
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.0/reveal.min.js"></script>
+  <script>
+    Reveal.initialize({
+      transition: 'slide',
+      width: 1280,
+      height: 720,
+      hash: true,
+      autoAnimateDuration: 0.8,
+      autoAnimateEasing: 'ease-in-out'
+    });
+  </script>
+</body>
+</html>
