@@ -1,0 +1,54 @@
+<section class="type02">
+  <style>
+    .type02 {
+      height: 100%;
+    }
+    .type02 .columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2%;
+      height: 85%;
+    }
+    .type02 .column {
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .type02 .col-header {
+      background: var(--color-primary);
+      color: white;
+      padding: 0.5em 1em;
+      font-weight: bold;
+      text-align: center;
+    }
+    .type02 .col-icon {
+      height: 35%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1em;
+    }
+    .type02 .col-icon img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+    .type02 .column ul {
+      padding: 0.5em 1.5em;
+      margin: 0;
+      font-size: 0.85em;
+      text-align: left;
+    }
+    .type02 .column li {
+      margin-bottom: 0.3em;
+    }
+  </style>
+
+  <h2>{{ TITLE }}</h2>
+
+  <div class="columns">
+    {{ COLUMNS }}
+  </div>
+</section>

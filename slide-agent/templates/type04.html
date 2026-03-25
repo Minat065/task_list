@@ -1,0 +1,83 @@
+<section class="type04">
+  <style>
+    .type04 {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 2%;
+    }
+    .type04 .phase-row {
+      display: grid;
+      grid-template-columns: repeat({{ PHASE_COUNT }}, 1fr);
+      height: 30%;
+      align-items: center;
+      gap: 1%;
+    }
+    .type04 .phase-oval {
+      border: 3px solid var(--color-primary);
+      border-radius: 50%;
+      text-align: center;
+      padding: 1em;
+      position: relative;
+      aspect-ratio: 2 / 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .type04 .phase-oval small {
+      color: var(--color-secondary);
+      font-size: 0.7em;
+    }
+    .type04 .phase-oval:not(:last-child)::after {
+      content: '→';
+      position: absolute;
+      right: -0.8em;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.5em;
+      color: var(--color-primary);
+    }
+    .type04 .result-bar {
+      height: 8%;
+      background: linear-gradient(90deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 0 2%;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+    .type04 .detail-row {
+      display: grid;
+      grid-template-columns: repeat({{ PHASE_COUNT }}, 1fr);
+      gap: 2%;
+      flex: 1;
+    }
+    .type04 .detail-box {
+      background: var(--color-light);
+      border-radius: 8px;
+      padding: 0.8em;
+    }
+    .type04 .detail-box ul {
+      padding-left: 1.2em;
+      margin: 0;
+      font-size: 0.85em;
+    }
+    .type04 .detail-box li {
+      margin-bottom: 0.3em;
+    }
+  </style>
+
+  <h2>{{ TITLE }}</h2>
+
+  <div class="phase-row">
+    {{ PHASES }}
+  </div>
+
+  <div class="result-bar">{{ RESULT_LABEL }}</div>
+
+  <div class="detail-row">
+    {{ DETAILS }}
+  </div>
+</section>

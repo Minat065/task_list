@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プロダクト紹介デモ</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.0/reveal.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.0/theme/white.min.css">
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+  <style>
+    :root {
+      --color-primary: #1a2f4e;
+      --color-secondary: #3a6ea5;
+      --color-dark: #404040;
+      --color-light: #f5f5f5;
+    }
+    .reveal .slides section {
+      height: 100%;
+      box-sizing: border-box;
+      padding: 2%;
+    }
+    .reveal h2 {
+      color: var(--color-primary);
+      font-size: 1.4em;
+      margin-bottom: 0.5em;
+    }
+    .reveal h4 {
+      color: var(--color-secondary);
+      margin: 0 0 0.3em 0;
+    }
+    .block {
+      background: var(--color-light);
+      border-radius: 8px;
+      padding: 0.8em;
+      border-left: 4px solid var(--color-secondary);
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section class="type01" data-auto-animate>
+  <style>
+    .type01 {
+      display: grid;
+      grid-template-columns: 60% 38%;
+      grid-template-rows: auto 1fr 8%;
+      gap: 2%;
+      height: 100%;
+    }
+    .type01 h2 {
+      grid-column: 1 / -1;
+    }
+    .type01 .main-visual {
+      grid-row: 2;
+      grid-column: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .type01 .main-visual img,
+    .type01 .main-visual model-viewer {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .type01 .right-stack {
+      grid-row: 2;
+      grid-column: 2;
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr;
+      gap: 4%;
+    }
+    .type01 .bottom-bar {
+      grid-column: 1 / -1;
+      background: var(--color-dark);
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 0 2%;
+      font-size: 0.9em;
+      border-radius: 4px;
+    }
+  </style>
+
+  <h2>革新的なプロダクト</h2>
+
+  <div class="main-visual">
+    <div style="background:#f0f0f0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;border-radius:8px;color:#999;">ビジュアル</div>
+  </div>
+
+  <div class="right-stack">
+    <div class="block">
+  <h4>高性能</h4>
+  <p>最新技術で従来比200%の処理速度を実現</p>
+</div>
+<div class="block">
+  <h4>省エネ</h4>
+  <p>消費電力を50%削減する独自アーキテクチャ</p>
+</div>
+<div class="block">
+  <h4>コンパクト</h4>
+  <p>従来機の1/3のサイズで設置場所を選ばない</p>
+</div>
+
+  </div>
+
+  <div class="bottom-bar">2026年4月発売予定 ｜ 詳細はお問い合わせください</div>
+</section>
+
+<section class="type02">
+  <style>
+    .type02 {
+      height: 100%;
+    }
+    .type02 .columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2%;
+      height: 85%;
+    }
+    .type02 .column {
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .type02 .col-header {
+      background: var(--color-primary);
+      color: white;
+      padding: 0.5em 1em;
+      font-weight: bold;
+      text-align: center;
+    }
+    .type02 .col-icon {
+      height: 35%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1em;
+    }
+    .type02 .col-icon img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+    .type02 .column ul {
+      padding: 0.5em 1.5em;
+      margin: 0;
+      font-size: 0.85em;
+      text-align: left;
+    }
+    .type02 .column li {
+      margin-bottom: 0.3em;
+    }
+  </style>
+
+  <h2>選ばれる3つの理由</h2>
+
+  <div class="columns">
+    <div class="column">
+  <div class="col-header">信頼性</div>
+  <div class="col-icon"><div style="font-size:3em;color:#ccc;">●</div></div>
+  <ul>
+        <li>稼働率99.99%</li>
+        <li>24時間監視体制</li>
+        <li>冗長構成標準</li>
+  </ul>
+</div>
+<div class="column">
+  <div class="col-header">拡張性</div>
+  <div class="col-icon"><div style="font-size:3em;color:#ccc;">●</div></div>
+  <ul>
+        <li>モジュール式設計</li>
+        <li>API連携対応</li>
+        <li>クラウドネイティブ</li>
+  </ul>
+</div>
+<div class="column">
+  <div class="col-header">サポート</div>
+  <div class="col-icon"><div style="font-size:3em;color:#ccc;">●</div></div>
+  <ul>
+        <li>専任エンジニア配置</li>
+        <li>SLA保証</li>
+        <li>導入支援プログラム</li>
+  </ul>
+</div>
+
+  </div>
+</section>
+
+<section class="type03">
+  <style>
+    .type03 {
+      height: 100%;
+    }
+    .type03 .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5%;
+      height: 85%;
+    }
+    .type03 .cell {
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .type03 .cell-header {
+      background: #000;
+      color: white;
+      padding: 0.3em 0.5em;
+      font-size: 0.85em;
+      text-align: center;
+    }
+    .type03 .cell-icon {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5em;
+    }
+    .type03 .cell-icon img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+    .type03 .cell-desc {
+      padding: 0.5em;
+      font-size: 0.8em;
+      text-align: center;
+      color: var(--color-dark);
+    }
+  </style>
+
+  <h2>導入実績</h2>
+
+  <div class="grid">
+    <div class="cell">
+  <div class="cell-header">製造業</div>
+  <div class="cell-icon"><div style="font-size:2em;color:#ccc;">◆</div></div>
+  <div class="cell-desc">生産ライン最適化で30%効率向上</div>
+</div>
+<div class="cell">
+  <div class="cell-header">金融</div>
+  <div class="cell-icon"><div style="font-size:2em;color:#ccc;">◆</div></div>
+  <div class="cell-desc">リアルタイム分析で意思決定を高速化</div>
+</div>
+<div class="cell">
+  <div class="cell-header">医療</div>
+  <div class="cell-icon"><div style="font-size:2em;color:#ccc;">◆</div></div>
+  <div class="cell-desc">画像診断の精度を95%以上に向上</div>
+</div>
+<div class="cell">
+  <div class="cell-header">小売</div>
+  <div class="cell-icon"><div style="font-size:2em;color:#ccc;">◆</div></div>
+  <div class="cell-desc">需要予測で在庫コスト40%削減</div>
+</div>
+<div class="cell">
+  <div class="cell-header">物流</div>
+  <div class="cell-icon"><div style="font-size:2em;color:#ccc;">◆</div></div>
+  <div class="cell-desc">配送ルート最適化で配送時間20%短縮</div>
+</div>
+<div class="cell">
+  <div class="cell-header">教育</div>
+  <div class="cell-icon"><div style="font-size:2em;color:#ccc;">◆</div></div>
+  <div class="cell-desc">個別学習プランで学習効果2倍</div>
+</div>
+
+  </div>
+</section>
+
+<section class="type04">
+  <style>
+    .type04 {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 2%;
+    }
+    .type04 .phase-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      height: 30%;
+      align-items: center;
+      gap: 1%;
+    }
+    .type04 .phase-oval {
+      border: 3px solid var(--color-primary);
+      border-radius: 50%;
+      text-align: center;
+      padding: 1em;
+      position: relative;
+      aspect-ratio: 2 / 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .type04 .phase-oval small {
+      color: var(--color-secondary);
+      font-size: 0.7em;
+    }
+    .type04 .phase-oval:not(:last-child)::after {
+      content: '→';
+      position: absolute;
+      right: -0.8em;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.5em;
+      color: var(--color-primary);
+    }
+    .type04 .result-bar {
+      height: 8%;
+      background: linear-gradient(90deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 0 2%;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+    .type04 .detail-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2%;
+      flex: 1;
+    }
+    .type04 .detail-box {
+      background: var(--color-light);
+      border-radius: 8px;
+      padding: 0.8em;
+    }
+    .type04 .detail-box ul {
+      padding-left: 1.2em;
+      margin: 0;
+      font-size: 0.85em;
+    }
+    .type04 .detail-box li {
+      margin-bottom: 0.3em;
+    }
+  </style>
+
+  <h2>導入プロセス</h2>
+
+  <div class="phase-row">
+    <div class="phase-oval">
+  <small>Phase 1</small>
+  <div>ヒアリング</div>
+</div>
+<div class="phase-oval">
+  <small>Phase 2</small>
+  <div>設計</div>
+</div>
+<div class="phase-oval">
+  <small>Phase 3</small>
+  <div>導入</div>
+</div>
+<div class="phase-oval">
+  <small>Phase 4</small>
+  <div>運用</div>
+</div>
+
+  </div>
+
+  <div class="result-bar">✓ 平均3ヶ月で本番稼働開始</div>
+
+  <div class="detail-row">
+    <div class="detail-box">
+  <ul>
+      <li>現状課題の把握</li>
+      <li>要件定義</li>
+      <li>ゴール設定</li>
+  </ul>
+</div>
+<div class="detail-box">
+  <ul>
+      <li>アーキテクチャ設計</li>
+      <li>データフロー定義</li>
+      <li>セキュリティ設計</li>
+  </ul>
+</div>
+<div class="detail-box">
+  <ul>
+      <li>環境構築</li>
+      <li>データ移行</li>
+      <li>テスト実行</li>
+  </ul>
+</div>
+<div class="detail-box">
+  <ul>
+      <li>モニタリング開始</li>
+      <li>最適化チューニング</li>
+      <li>定期レビュー</li>
+  </ul>
+</div>
+
+  </div>
+</section>
+
+
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.0/reveal.min.js"></script>
+  <script>
+    Reveal.initialize({
+      transition: 'slide',
+      width: 1280,
+      height: 720,
+      hash: true,
+      autoAnimateDuration: 0.8,
+      autoAnimateEasing: 'ease-in-out'
+    });
+  </script>
+</body>
+</html>
